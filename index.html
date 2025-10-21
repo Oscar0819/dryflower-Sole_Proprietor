@@ -1,102 +1,14 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>운영자 정보 — 뉴스/잡지 앱 운영자</title>
-  <meta name="description" content="이 페이지는 Play 콘솔의 뉴스 및 잡지 앱 선언을 위한 운영자(개인사업자) 정보를 제공합니다." />
-  <style>
-    :root{--bg:#f7f7fb;--card:#ffffff;--muted:#6b7280;--accent:#0b5fff}
-    body{font-family:Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); margin:0; color:#0f172a}
-    .wrap{max-width:880px;margin:36px auto;padding:24px}
-    header{display:flex;align-items:center;gap:16px}
-    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,#e2e8f0,#c7d2fe);display:flex;align-items:center;justify-content:center;font-weight:700;color:#0b1226}
-    h1{margin:0;font-size:20px}
-    .card{background:var(--card);border-radius:12px;padding:20px;margin-top:20px;box-shadow:0 6px 20px rgba(2,6,23,0.06)}
-    dl{display:grid;grid-template-columns:160px 1fr;row-gap:12px;column-gap:18px}
-    dt{font-weight:600;color:#111827}
-    dd{margin:0;color:var(--muted)}
-    pre{background:#0f172a;color:#f8fafc;padding:12px;border-radius:8px;overflow:auto}
-    .note{font-size:13px;color:var(--muted);margin-top:12px}
-    a{color:var(--accent);text-decoration:none}
-    footer{margin-top:28px;color:var(--muted);font-size:13px}
-  </style>
+  <meta charset="utf-8">
+  <title>운영자 정보</title>
 </head>
 <body>
-  <main class="wrap">
-    <header>
-      <div class="logo">NI</div>
-      <div>
-        <h1>앱 운영자 정보 (개인사업자용)</h1>
-        <div style="color:var(--muted);font-size:13px;margin-top:6px">GitHub Pages에 배포 가능한 단일 HTML 예시</div>
-      </div>
-    </header>
-
-    <section class="card">
-      <p class="note">아래 항목을 실제 정보로 교체하세요. 개인사업자 등록번호는 아래 <strong>사업자등록번호</strong> 칸에 입력하시면 됩니다.</p>
-
-      <dl>
-        <dt>운영 주체명</dt>
-        <dd id="operator-name">홍길동(개인사업자) — &lt;여기에 운영자명 입력&gt;</dd>
-
-        <dt>형태</dt>
-        <dd>Individual / Sole Proprietor</dd>
-
-        <dt>사업자등록번호</dt>
-        <dd id="biz-no">&lt;사업자등록번호 입력 — 예: 123-45-67890&gt;</dd>
-
-        <dt>공식 웹사이트</dt>
-        <dd id="website"><a href="#">https://your-domain-or-github.io</a></dd>
-
-        <dt>연락 이메일</dt>
-        <dd id="email">contact@your-domain.com</dd>
-
-        <dt>앱 이름</dt>
-        <dd id="app-name">앱 이름을 입력하세요</dd>
-
-        <dt>콘텐츠 출처</dt>
-        <dd id="content-source">직접 작성 / 제휴 언론사 / RSS / AI 요약 등 — 출처 표기 방침을 적어주세요</dd>
-
-        <dt>저작권 및 출처 표기</dt>
-        <dd id="copyright">예: 모든 요약은 원문 링크를 포함하며, 원 저작권자를 표기합니다.</dd>
-
-        <dt>문의 및 신고</dt>
-        <dd id="support">문의: contact@your-domain.com / 저작권 신고: abuse@your-domain.com</dd>
-      </dl>
-
-      <div class="note" style="margin-top:16px">아래 JSON-LD(구조화 데이터)는 선택사항입니다. 붙여넣으면 검색엔진이 운영자 정보를 이해하는 데 도움이 됩니다.</div>
-
-      <pre id="jsonld">{
-  "@context": "https://schema.org",
-  "@type": "NewsMediaOrganization",
-  "name": "홍길동미디어",
-  "url": "https://your-domain-or-github.io",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "customer support",
-    "email": "contact@your-domain.com"
-  }
-}</pre>
-
-      <div class="note">저장 방법: 이 파일을 <code>index.html</code>로 GitHub repo 루트에 올리고 GitHub Pages를 활성화하세요. 또는 <code>docs/</code> 폴더에 올릴 수도 있습니다.</div>
-    </section>
-
-    <section class="card" style="margin-top:18px">
-      <h2 style="margin-top:0">Play 콘솔에 기입할 때 복사하기 좋은 문구 (예시)</h2>
-      <pre>운영 주체: 홍길동(개인사업자)
-형태: Individual / Sole Proprietor
-사업자등록번호: &lt;사업자등록번호 입력&gt;
-공식 웹사이트: https://your-domain-or-github.io
-연락 이메일: contact@your-domain.com
-콘텐츠 출처: AI 요약 + 원문 링크 제공 (원문 출처를 명시합니다)
-저작권: 원저작권자의 권리를 존중하며, 원문 링크 및 출처를 항상 표기합니다.
-</pre>
-      <div class="note">이 문구를 Play 콘솔의 뉴스 앱 선언란에 붙여넣으면 됩니다.</div>
-    </section>
-
-    <footer>
-      <div>추가 팁: 웹사이트(또는 GitHub Pages)에 운영자 이름·연락처·사업자번호(가능한 경우)를 명확히 표기해 두세요. 구글 검증 과정에서 필요한 정보입니다.</div>
-    </footer>
-  </main>
+  <h1>앱 운영자 정보</h1>
+  <p>운영자: 박은우 (개인사업자)</p>
+  <p>사업자등록번호: 658-10-02825</p>
+  <p>연락 이메일: oscar08193@gmail.com</p>
+  <p>본 페이지는 Google Play 뉴스 및 잡지 앱 선언을 위한 운영자 정보를 제공합니다.</p>
 </body>
 </html>
